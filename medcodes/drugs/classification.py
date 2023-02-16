@@ -26,9 +26,19 @@ def atc_classification(atc_id):
     atc_id = list(atc_id.upper())
 
     lv1_code = atc_id[0]
-    lv2_code = ''.join(atc_id[0:3])
-    lv3_code = ''.join(atc_id[0:4])
-    lv4_code = ''.join(atc_id[0:5])
+    
+    if len(atc_id) == 2:
+        lv2_code = ''.join(atc_id[0:3])
+    else lv2_code = None
+    
+    if len(atc_id) == 3:
+        lv3_code = ''.join(atc_id[0:4])
+    else lv3_code = None
+    
+    if len(atc_id) == 4:
+        lv4_code = ''.join(atc_id[0:5])
+    else lv4_code = None
+  
     lv5_code = None
     if len(atc_id) == 7:
         lv5_code = ''.join(atc_id)
