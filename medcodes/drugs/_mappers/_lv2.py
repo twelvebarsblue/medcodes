@@ -10,6 +10,7 @@ ATC_LV2 = {
     "A09": "digestives, incl enzymes",
     "A10": "drugs used in diabetes",
     "A11": "vitamins",
+    "A12": "mineral supplements",
     "A16": "other alimentary tract and metabolism products",
     "B01": "antithrombotic agents",
     "B02": "antihemorrhagics",
