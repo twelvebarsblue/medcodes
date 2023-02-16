@@ -4947,5 +4947,12 @@ ATC_LV5 = {
     "V08AD02": "iopydol",
     "L03AA15": "balugrastim",
     "A10BK02": "canagliflozin",
-    "J05AP03": "boceprevir"
+    "J05AP03": "boceprevir",
+    "A02BC08": "vonoprazan",
+    "A10BK07": "luseogliflozin",
+    "A10BK04": "ertugliflozin",
+    "R06AA11": "dimenhydrinate",
+    "J05AJ03": "dolutegravir",
+    "L01EF02": "ribociclib",
+    "A10BD24": "sitagliptin and ertugliflozin",
 }
