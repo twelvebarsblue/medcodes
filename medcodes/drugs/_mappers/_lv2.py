@@ -38,6 +38,7 @@ ATC_LV2 = {
     "G04": "urologicals",
     "H01": "pituitary and hypothalamic hormones",
     "H02": "corticosteroids for systemic use",
+    "H03": "thyroid therapy", 
     "H05": "calcium homeostasis",
     "J01": "antibacterials for systemic use",
     "J02": "antimycotics for systemic use",
