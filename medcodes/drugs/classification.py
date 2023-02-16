@@ -24,40 +24,58 @@ def atc_classification(atc_id):
         raise ValueError("ATC code must be a string.")
 
     atc_id = list(atc_id.upper())
-
-    lv1_code = atc_id[0]
-    lv1_desc = ATC_LV1[lv1_code]
+    
+    if len(atc_id) == 1:
+        lv1_code = atc_id[0]
+        lv1_desc = ATC_LV1[lv1_code]
+        codes = [lv1_code]
+        descriptions = [lv1_desc]
     
     if len(atc_id) == 2:
+        lv1_code = atc_id[0]
+        lv1_desc = ATC_LV1[lv1_code]
         lv2_code = ''.join(atc_id[0:3])
         lv2_desc = ATC_LV2[lv2_code]
-    else:
-        lv2_code = None
-        lv2_desc = None
+        codes = [lv1_code, lv2_code]
+        descriptions = [lv1_desc, lv2_desc]
+
     
     if len(atc_id) == 3:
+        lv1_code = atc_id[0]
+        lv1_desc = ATC_LV1[lv1_code]
+        lv2_code = ''.join(atc_id[0:3])
+        lv2_desc = ATC_LV2[lv2_code]
         lv3_code = ''.join(atc_id[0:4])
         lv3_desc = ATC_LV3[lv3_code]
-    else:
-        lv3_code = None
-        lv3_desc = None
+        codes = [lv1_code, lv2_code, lv3_code]
+        descriptions = [lv1_desc, lv2_desc, lv3_desc]
+
     
     if len(atc_id) == 4:
+        lv1_code = atc_id[0]
+        lv1_desc = ATC_LV1[lv1_code]
+        lv2_code = ''.join(atc_id[0:3])
+        lv2_desc = ATC_LV2[lv2_code]
+        lv3_code = ''.join(atc_id[0:4])
+        lv3_desc = ATC_LV3[lv3_code]
         lv4_code = ''.join(atc_id[0:5])
         lv4_desc = ATC_LV4[lv4_code]
-    else:
-        lv4_code = None
-        lv4_desc = None
-  
-    lv5_code = None
-    if len(atc_id) == 7:
+        codes = [lv1_code, lv2_code, lv3_code, lv4_code]
+        descriptions = [lv1_desc, lv2_desc, lv3_desc, lv4_desc]
+            
+    if len(atc_id) >= 5:
+        lv1_code = atc_id[0]
+        lv1_desc = ATC_LV1[lv1_code]
+        lv2_code = ''.join(atc_id[0:3])
+        lv2_desc = ATC_LV2[lv2_code]
+        lv3_code = ''.join(atc_id[0:4])
+        lv3_desc = ATC_LV3[lv3_code]
+        lv4_code = ''.join(atc_id[0:5])
+        lv4_desc = ATC_LV4[lv4_code]
         lv5_code = ''.join(atc_id)
-    codes = [lv1_code, lv2_code, lv3_code, lv4_code, lv5_code]
-
-    lv5_desc = None
-    if len(atc_id) == 7:
         lv5_desc = ATC_LV5[lv5_code]
-    descriptions = [lv1_desc, lv2_desc, lv3_desc, lv4_desc, lv5_desc]
+        codes = [lv1_code, lv2_code, lv3_code, lv4_code, lv5_code]
+        descriptions = [lv1_desc, lv2_desc, lv3_desc, lv4_desc, lv5_desc]
 
     atc_info = DataFrame({
         'level': [1, 2, 3, 4, 5],
