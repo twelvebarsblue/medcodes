@@ -35,7 +35,7 @@ def atc_classification(atc_id):
             'code': codes,
             'description': descriptions})
     
-    if len(atc_id) == 2:
+    if len(atc_id) == 3:
         lv1_code = atc_id[0]
         lv1_desc = ATC_LV1[lv1_code]
         lv2_code = ''.join(atc_id[0:3])
@@ -48,7 +48,7 @@ def atc_classification(atc_id):
             'description': descriptions})
 
     
-    if len(atc_id) == 3:
+    if len(atc_id) == 4:
         lv1_code = atc_id[0]
         lv1_desc = ATC_LV1[lv1_code]
         lv2_code = ''.join(atc_id[0:3])
@@ -63,7 +63,7 @@ def atc_classification(atc_id):
             'description': descriptions})
 
     
-    if len(atc_id) == 4:
+    if len(atc_id) == 5:
         lv1_code = atc_id[0]
         lv1_desc = ATC_LV1[lv1_code]
         lv2_code = ''.join(atc_id[0:3])
@@ -79,7 +79,7 @@ def atc_classification(atc_id):
             'code': codes,
             'description': descriptions})
             
-    if len(atc_id) >= 5:
+    if len(atc_id) >= 6:
         lv1_code = atc_id[0]
         lv1_desc = ATC_LV1[lv1_code]
         lv2_code = ''.join(atc_id[0:3])
