@@ -28,21 +28,21 @@ def atc_classification(atc_id):
     lv1_code = atc_id[0]
     lv1_desc = ATC_LV1[lv1_code]
     
-    if len(atc_id) >= 2:
+    if len(atc_id) == 2:
         lv2_code = ''.join(atc_id[0:3])
         lv2_desc = ATC_LV2[lv2_code]
     else:
         lv2_code = None
         lv2_desc = None
     
-    if len(atc_id) >= 3:
+    if len(atc_id) == 3:
         lv3_code = ''.join(atc_id[0:4])
         lv3_desc = ATC_LV3[lv3_code]
     else:
         lv3_code = None
         lv3_desc = None
     
-    if len(atc_id) >= 4:
+    if len(atc_id) == 4:
         lv4_code = ''.join(atc_id[0:5])
         lv4_desc = ATC_LV4[lv4_code]
     else:
