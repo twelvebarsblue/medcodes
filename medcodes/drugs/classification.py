@@ -30,6 +30,10 @@ def atc_classification(atc_id):
         lv1_desc = ATC_LV1[lv1_code]
         codes = [lv1_code]
         descriptions = [lv1_desc]
+        atc_info = DataFrame({
+            'level': [1],
+            'code': codes,
+            'description': descriptions})
     
     if len(atc_id) == 2:
         lv1_code = atc_id[0]
@@ -38,6 +42,10 @@ def atc_classification(atc_id):
         lv2_desc = ATC_LV2[lv2_code]
         codes = [lv1_code, lv2_code]
         descriptions = [lv1_desc, lv2_desc]
+        atc_info = DataFrame({
+            'level': [1, 2],
+            'code': codes,
+            'description': descriptions})
 
     
     if len(atc_id) == 3:
@@ -49,6 +57,10 @@ def atc_classification(atc_id):
         lv3_desc = ATC_LV3[lv3_code]
         codes = [lv1_code, lv2_code, lv3_code]
         descriptions = [lv1_desc, lv2_desc, lv3_desc]
+        atc_info = DataFrame({
+            'level': [1, 2, 3],
+            'code': codes,
+            'description': descriptions})
 
     
     if len(atc_id) == 4:
@@ -62,6 +74,10 @@ def atc_classification(atc_id):
         lv4_desc = ATC_LV4[lv4_code]
         codes = [lv1_code, lv2_code, lv3_code, lv4_code]
         descriptions = [lv1_desc, lv2_desc, lv3_desc, lv4_desc]
+        atc_info = DataFrame({
+            'level': [1, 2, 3, 4],
+            'code': codes,
+            'description': descriptions})
             
     if len(atc_id) >= 5:
         lv1_code = atc_id[0]
@@ -76,9 +92,10 @@ def atc_classification(atc_id):
         lv5_desc = ATC_LV5[lv5_code]
         codes = [lv1_code, lv2_code, lv3_code, lv4_code, lv5_code]
         descriptions = [lv1_desc, lv2_desc, lv3_desc, lv4_desc, lv5_desc]
+        atc_info = DataFrame({
+            'level': [1, 2, 3, 4, 5],
+            'code': codes,
+            'description': descriptions})
 
-    atc_info = DataFrame({
-        'level': [1, 2, 3, 4, 5],
-        'code': codes,
-        'description': descriptions})
+
     return atc_info
